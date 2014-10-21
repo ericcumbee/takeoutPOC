@@ -6,7 +6,7 @@
  * Time: 8:06 PM
  */
 
-namespace App\Lib\Validators;
+namespace Takeout\Validators;
 
 
 abstract class Validator {
