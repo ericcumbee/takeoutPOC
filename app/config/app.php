@@ -123,7 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Takeout\ServiceProviders\CategoryServiceProvider',
         'Takeout\ServiceProviders\RestaurantServiceProvider',
-        'Jenssegers\Mongodb\MongodbServiceProvider'
+        'Jenssegers\Mongodb\MongodbServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
 
 	),
 

@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"gathercontent/laravel-fractal": "~0.1",
-		"jenssegers/mongodb": "dev-master"
+		"jenssegers/mongodb": "dev-master",
+		"barryvdh/laravel-ide-helper": "~1.11@dev"
 	},
 	"autoload": {
 		"classmap": [

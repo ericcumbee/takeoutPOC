@@ -12,3 +12,7 @@
 */
 
 Route::get('/','HomeController@showWelcome');
+Route::group(array('prefix'=>'admin', 'namespace' =>'Takeout\Admin\Controllers'),function()
+{
+    route::get('/','AdminDashboardController@Index');
+});
