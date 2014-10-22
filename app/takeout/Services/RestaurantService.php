@@ -9,6 +9,7 @@
 namespace Takeout\Services;
 
 
+use Illuminate\Support\Facades\URL;
 use Takeout\Repositories\RestaurantRepositoryInterface;
 use Takeout\Validators\RestaurantValidator;
 
@@ -23,11 +24,33 @@ class RestaurantService {
     public function create($inputs)
     {
         $validator = new RestaurantValidator($inputs);
-        $result = array();
         if ($validator->fails())
         {
             return $validator;
         }
-        return $inputs;
+        var_dump($inputs);
+        $data['name'] = $inputs['name'];
+        $data['category'] = $inputs['category'];
+        $data['enabled'] =  (boolean)($inputs['enabled'] === 'true');
+        $restaurant = $this->restaurant->create();
+        //Save Restaraunt to DB
+        //Save Regular Hours to DB
+        //Create Job to Resize logo
+        //Create User Accounts for Restaruant Users
+        return $data;
+    }
+
+    public function restaurantIndexList()
+    {
+        $data = $this->restaurant->all();
+        $indexlist = array();
+        foreach ($data as $d)
+        {
+            $indexlist[] = array(
+              'name' => $d->name,
+                'id' => $d->id
+            );
+        }
+        return $indexlist;
     }
 } 

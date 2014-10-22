@@ -6,8 +6,9 @@
  * Time: 7:50 PM
  */
 namespace Takeout\Model;
-use Jenssegers\Mongodb\Model as Eloquent;
 
-class Restaurant extends Eloquent {
+use Zizaco\MongolidLaravel\MongoLid;
 
+class Restaurant extends MongoLid{
+    protected $collection = 'restaurants';
 } 

@@ -7,9 +7,10 @@
  */
 
 namespace Takeout\Model;
-use Jenssegers\Mongodb\Model as Eloquent;
 
-class Category extends Eloquent {
+use Zizaco\MongolidLaravel\MongoLid;
 
+class Category extends MongoLid {
+    protected $collection = 'catagories';
 
 } 

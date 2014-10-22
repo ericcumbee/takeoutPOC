@@ -12,6 +12,7 @@ namespace Takeout\Repositories;
 interface CategoryRepositoryInterface {
 
     public function all();
+    public function categoryList();
 
 
 } 

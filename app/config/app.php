@@ -124,7 +124,11 @@ return array(
         'Takeout\ServiceProviders\CategoryServiceProvider',
         'Takeout\ServiceProviders\RestaurantServiceProvider',
         'Jenssegers\Mongodb\MongodbServiceProvider',
-        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Zizaco\ConfideMongo\ConfideMongoServiceProvider',
+        'Zizaco\Entrust\EntrustServiceProvider',
+        'Zizaco\MongolidLaravel\MongolidServiceProvider',
+
 
 	),
 
@@ -193,8 +197,10 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
         'CategoryRepositoryInterface'   => 'Takeout\Repositories\CategoryRepositoryInterface',
-        'RestaurantRepositoryInterface' => 'Takeout\Repositories\RestaurantRepositoryInterface'
-
+        'RestaurantRepositoryInterface' => 'Takeout\Repositories\RestaurantRepositoryInterface',
+        'Confide'    => 'Zizaco\Confide\ConfideFacade',
+        'Entrust'    => 'Zizaco\Entrust\EntrustFacade',
+        'MongoLid'    => 'Zizaco\MongolidLaravel\MongoLid'
 	),
 
 );

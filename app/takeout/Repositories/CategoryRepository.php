@@ -10,10 +10,18 @@ namespace Takeout\Repositories;
 
 
 
+
+use Takeout\Model\Category;
+
 class CategoryRepository implements CategoryRepositoryInterface {
     public function all()
     {
-        return "Hello World from Category Repository";
+        return Category::all();
+    }
+
+    public function categoryList()
+    {
+
     }
 
 

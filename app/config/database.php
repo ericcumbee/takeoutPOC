@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'mongodb',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -43,7 +43,15 @@ return array(
 	| choice installed on your machine before you begin development.
 	|
 	*/
-
+    'mongodb' => array(
+        'default' => array(
+            'host'     => 'localhost',
+            'port'     => 27017,
+            'database' => 'takeout',
+            'username'     => '',
+            'password'     => '',
+        ),
+    ),
 	'connections' => array(
 
 		'sqlite' => array(
@@ -51,6 +59,15 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
+        'mongodb' => array(
+            'default' => array(
+                'host'     => 'localhost',
+                'port'     => 27017,
+                'database' => 'takeout',
+                'username'     => '',
+                'password'     => '',
+            ),
+        ),
 
 		'mysql' => array(
 			'driver'    => 'mysql',

@@ -9,10 +9,22 @@
 namespace Takeout\Repositories;
 
 
+
+use Takeout\Model\Restaurant;
+
 class RestaurantRepository implements RestaurantRepositoryInterface {
     public function all()
     {
-        return "Hello from the Restaurant Repository";
+
+        $data = Restaurant::all();
+        if($data->count() != 0)
+        {
+            return $data;
+        }
+    }
+    public function create($data)
+    {
+
     }
 
 } 

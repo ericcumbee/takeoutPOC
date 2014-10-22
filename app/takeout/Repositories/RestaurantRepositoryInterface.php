@@ -8,5 +8,6 @@
 namespace Takeout\Repositories;
 interface RestaurantRepositoryInterface {
     public function all();
+    public function create($data);
 
 }
